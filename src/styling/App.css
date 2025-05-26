@@ -86,6 +86,7 @@ p {
 
     .bio {
         font-size: 0.9em;
+        margin-bottom: 20px;
     }
 
     .links {
@@ -95,14 +96,10 @@ p {
       
 
     .links a {
-        text-decoration: none;
-        color: #000; 
-        font-weight: bold;
-        border: 2px solid #000; 
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    }
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+      }
 
     .socials {
         gap: 10px;
