@@ -1,0 +1,167 @@
+.designPage {
+  padding: 2rem 2rem 0 2rem; 
+  font-family: 'Helvetica Neue', sans-serif;
+  max-width: 1200px;
+  margin: auto;
+  color: #222;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: -15px;
+}
+
+.returnHome {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-style: italic;
+  text-decoration: underline;
+  color: grey;
+}
+
+.description {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.1;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Featured section */
+.featuredContainer {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 3rem;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.textContainer {
+  flex: 1;
+  text-align: left;
+  max-width: none;
+  margin: 0;
+}
+
+.textContainer h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.carouselSlide {
+  width: 560px;
+  height: 700px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carouselSlide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navBtn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #444;
+  transition: color 0.2s ease;
+}
+
+.navBtn:hover {
+  color: #000;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #666;
+  background-color: #f8f8f8;
+  margin-top: 30px;
+  margin-bottom: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+}
+
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .carouselSlide {
+    width: 250px;
+    height: 160px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .navBtn {
+    font-size: 1.5rem;
+  }
+
+  .featuredContainer {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .textContainer {
+    text-align: center;
+  }
+
+  .textContainer h2 {
+    font-size: 1.8rem;
+  }
+}
