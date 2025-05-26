@@ -10,12 +10,12 @@ function Home() {
     <div>
       <h1>Rohan Tummala</h1>
       <p>AI/ML Research | Sports Analytics | Computational Biology | Graphic Design</p>
+      <p className="bio">Rising Freshman @ UC Berkeley. Reach out: <a href="mailto:rohantummala07@gmail.com" className='email-link'>rohantummala07@gmail.com</a></p>
 
       <div className="links">
         <Link to="/projects">Technical Projects</Link>
         <Link to="/design">Graphic Design</Link>
         <Link to="/interests">Interests</Link>
-        <Link to="/contact">Contact</Link>
       </div>
 
       <div className="socials">
