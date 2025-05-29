@@ -44,7 +44,7 @@ function Projects() {
           <img src={simulationsImage} alt="Monte Carlo Simulations" />
           <h2>Analyzing Basketball Player Props Using Monte Carlo Simulations</h2>
           <p>
-            <a href="https://raw.githubusercontent.com/rohtumm/rohtumm.github.io/refs/heads/main/images/presentation.pdf" target="_blank" rel="noopener noreferrer" className="external">
+            <a href="https://raw.githubusercontent.com/rohtumm/rohtumm.github.io/main/images/presentation.pdf" target="_blank" rel="noopener noreferrer" className="external">
               Presentation
             </a>{' '}
             given at the 2024 Ohio State Sports Analytics Conference predicting NBA player points lines using simulations.
@@ -68,7 +68,7 @@ function Projects() {
           <img src={mvpImage} alt="NBA MVP Predictor" />
           <h2>NBA MVP Predictor</h2>
           <p>
-            Project that predicted the NBA MVP for the 2022-23 season. Published in the{' '}
+            Project that predicted the NBA MVP for the 2022-23 season using a Random Forest model. Published in the{' '}
             <a href="https://www.samford.edu/sports-analytics/fans/2023/Using-Machine-Learning-to-Predict-the-NBA-MVP" target="_blank" rel="noopener noreferrer" className="external">
               Samford Center for Sports Analytics
             </a>.
@@ -83,7 +83,7 @@ function Projects() {
             <a href="https://www.medrxiv.org/content/10.1101/2023.10.03.23296522v1.full" target="_blank" rel="noopener noreferrer" className="external">
               Research paper
             </a>{' '}
-            exploring AI-based brain tumor detection methods.
+            exploring brain tumor detection and classification methods utilizing an Inception Resnet architecture.
           </p>
           <p className="project-date">January 2023</p>
         </div>
