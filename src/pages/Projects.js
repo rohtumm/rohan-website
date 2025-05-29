@@ -7,11 +7,12 @@ import simulationsImage from '../images/simulations.png';
 import nuevaImage from '../images/nueva_sports.png';
 import mvpImage from '../images/mvp.png';
 import brainTumorImage from '../images/brain_tumor_paper.png';
+import UCSFImage from '../images/ucsf_logo.jpg'
 
 function Projects() {
   return (
     <div>
-      <h3>Technical Projects</h3>
+      <h3>Technical Projects and Research</h3>
       <Link to="/" className="return-home">Return to Homepage</Link>
 
       <div className="projects-container">
@@ -25,6 +26,18 @@ function Projects() {
             </a>
           </p>
           <p className="project-date">February 2025</p>
+        </div>
+
+        <div className="project">
+          <img src={UCSFImage} alt="UCSF Cardiac Biomechanics Lab" />
+          <h2>UCSF Cardiac Biomechanics Lab</h2>
+          <p>
+            Implemented Meta AI's Segment Anything model to create video segmentations of sample aortic tissues' across a stretching process.{' '}
+            <a href="https://github.com/rohtumm/UCSF-Tissue-Segmentation" target="_blank" rel="noopener noreferrer" className="external">
+              View the code here.
+            </a>
+          </p>
+          <p className="project-date">August 2024</p>
         </div>
 
         <div className="project">
