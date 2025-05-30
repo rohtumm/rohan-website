@@ -44,7 +44,7 @@ function Projects() {
           <img src={simulationsImage} alt="Monte Carlo Simulations" />
           <h2>Analyzing Basketball Player Props Using Monte Carlo Simulations</h2>
           <p>
-            <a href="https://raw.githubusercontent.com/rohtumm/rohtumm.github.io/main/images/presentation.pdf" target="_blank" rel="noopener noreferrer" className="external">
+            <a href="/presentation.pdf" target="_blank" rel="noopener noreferrer" className="external">
               Presentation
             </a>{' '}
             given at the 2024 Ohio State Sports Analytics Conference predicting NBA player points lines using simulations.
