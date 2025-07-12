@@ -3,6 +3,20 @@ body, html {
     padding: 0;
 }
 
+.projectsPage {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    background: url('../images/gradient.jpg') center center/cover no-repeat;
+    overflow: hidden;
+}
+
+.projectsContentWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 20px 20px;
+}
+
 h3 {
     font-size: 2.5em;
     margin: 20px;
@@ -17,17 +31,6 @@ h3 {
     flex-wrap: wrap;
 }
 
-.links a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    border: 2px solid #000;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    font-size: 1em;
-}
-
 .links a:hover {
     background: #000;
     color: #fff;
@@ -35,13 +38,12 @@ h3 {
 
 .projects-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
     gap: 60px;
     padding: 20px;
-    margin: 0 auto;
-    max-width: 90%;
+    /* Remove max-width and margin to allow full row */
+    margin-top: 0;
 }
 
 .project {
@@ -51,7 +53,7 @@ h3 {
     width: 300px;
     border: 1px solid #000;
     border-radius: 10px;
-    height: 540px;
+    height: 600px;
     padding: 15px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
@@ -111,30 +113,67 @@ footer {
     color: #666;
 }
 
+.projects-title {
+    margin: 0;
+    padding: 0;
+}
 
-
+.no-float-animation {
+    animation: none !important;
+}
 
 @media screen and (max-width: 768px) {
-    h1 {
-        font-size: 2em;
-        margin: 20px;
-        margin-top: 30px;
+    .projects-title {
+        margin: 20px 0 10px 0;
+        padding: 0 0 10px 0;
     }
-    
+}
+
+
+@media screen and (max-width: 1100px) {
+    .projects-container {
+        gap: 30px;
+    }
+    .project {
+        width: 45vw;
+        min-width: 260px;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projectsPage, .projectsContentWrapper {
+        width: 100vw;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
     .projects-container {
         flex-direction: column;
         align-items: center;
+        gap: 30px;
+        justify-content: center;
+        width: 100vw;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0 0 20px 0;
     }
-    
     .project {
-        width: 90%;
+        width: 94vw;
+        min-width: 0;
+        max-width: 98vw;
+        margin: 0 auto;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
     }
-    
-    .return-home {
-        display: block;
-        margin-top: 10px;
-        font-style: italic;
-        text-decoration: underline;
-        color: grey;
+    .project img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        box-sizing: border-box;
     }
 }

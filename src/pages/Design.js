@@ -42,57 +42,65 @@ function Design() {
 
   return (
     <div className={styles.designPage}>
-      <h1 className={styles.title}>Graphic Design</h1>
-      <a href="/" className={styles.returnHome}>Return to Homepage</a>
-      <p className={styles.description}>
-        Here are just a few of my favorite graphic design projects from my career. Over the past 5 years, 
-        I've created art for brands including Duke Athletics, Ballislife, and various clientele in the NBA and NCAA. 
-        My full portfolio can be found at{' '}
-        <a href="https://www.behance.net/rohantummala" target="_blank" rel="noopener noreferrer" style={{ color: 'grey', fontStyle: 'italic' }}>
-          this link
-        </a>.
-      </p>
+      <div className={styles.gradientShape1}></div>
+      <div className={styles.gradientShape2}></div>
+      <div className={styles.gradientShape3}></div>
+      <div className={styles.gradientShape4}></div>
+      <div className={styles.gradientShape5}></div>
 
-      <div className={styles.gallery}>
-        {allImages.map((img, i) => (
-          <img
-            key={i}
-            src={img}
-            alt={`Design ${i + 1}`}
-            onClick={() => setSelectedImage(img)}
-            style={{ cursor: 'pointer' }}
-          />
-        ))}
-      </div>
+      <div className={styles.designContentWrapper}>
+        <h1 className={`${styles.title} ${styles.floatingText} ${styles.noFloatAnimation}`}>Graphic Design</h1>
+        <a href="/" className={styles.returnHome}>Return to Homepage</a>
+        <p className={styles.description}>
+          Here are just a few of my favorite graphic design projects from my career. Over the past 5 years, 
+          I've created art for brands including Duke Athletics, Ballislife, and various clientele in the NBA and NCAA. 
+          My full portfolio can be found at{' '}
+          <a href="https://www.behance.net/rohantummala" target="_blank" rel="noopener noreferrer" style={{ color: 'grey', fontStyle: 'italic' }}>
+            this link
+          </a>.
+        </p>
 
-      {selectedImage && (
-        <div className={styles.modalOverlay} onClick={() => setSelectedImage(null)}>
-          <img
-            src={selectedImage}
-            alt="Expanded"
-            className={styles.modalImage}
-            onClick={(e) => e.stopPropagation()}
-          />
+        <div className={styles.gallery}>
+          {allImages.map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt={`Design ${i + 1}`}
+              onClick={() => setSelectedImage(img)}
+              style={{ cursor: 'pointer' }}
+            />
+          ))}
         </div>
-      )}
 
-      <div ref={featuredRef} className={`${styles.featuredContainer} ${isFeaturedVisible ? styles.visible : ''}`}>
-        <div className={styles.textContainer}>
-          <h2>Featured Work</h2>
-          <p className={styles.description}>
-            Click through to explore some of my designs that have been featured across various platforms! Most recently, my graphic created for the 7uice foundation, founded by Jaylen Brown of the Boston Celtics, was shown on an NBC10 Boston news segment during the 2024 NBA Finals. Other designs that I have created have also been featured on different professional teams' social media accounts, including those of the Chicago Bulls and Denver Nuggets.
-          </p>
-        </div>
-        <div className={styles.carousel}>
-          <button className={styles.navBtn} onClick={handlePrev}>❮</button>
-          <div className={styles.carouselSlide}>
-            <img src={featuredImages[currentIndex]} alt="Featured Work" />
+        {selectedImage && (
+          <div className={styles.modalOverlay} onClick={() => setSelectedImage(null)}>
+            <img
+              src={selectedImage}
+              alt="Expanded"
+              className={styles.modalImage}
+              onClick={(e) => e.stopPropagation()}
+            />
           </div>
-          <button className={styles.navBtn} onClick={handleNext}>❯</button>
-        </div>
-      </div>
+        )}
 
-      <footer className={styles.footer}>© 2025 Rohan Tummala</footer>
+        <div ref={featuredRef} className={`${styles.featuredContainer} ${isFeaturedVisible ? styles.visible : ''}`}>
+          <div className={styles.textContainer}>
+            <h2>Featured Work</h2>
+            <p className={styles.description}>
+              Click through to explore some of my designs that have been featured across various platforms! Most recently, my graphic created for the 7uice foundation, founded by Jaylen Brown of the Boston Celtics, was shown on an NBC10 Boston news segment during the 2024 NBA Finals. Other designs that I have created have also been featured on different professional teams' social media accounts, including those of the Chicago Bulls and Denver Nuggets.
+            </p>
+          </div>
+          <div className={styles.carousel}>
+            <button className={styles.navBtn} onClick={handlePrev}>❮</button>
+            <div className={styles.carouselSlide}>
+              <img src={featuredImages[currentIndex]} alt="Featured Work" />
+            </div>
+            <button className={styles.navBtn} onClick={handleNext}>❯</button>
+          </div>
+        </div>
+
+        <footer className={styles.footer}>© 2025 Rohan Tummala</footer>
+      </div>
     </div>
   );
 }

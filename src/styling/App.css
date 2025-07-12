@@ -1,9 +1,9 @@
 body, html {
-    font-family: Arial, sans-serif;
+    font-family: helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff; 
-    color: #000;
+    color: #262626;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +12,37 @@ body, html {
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
+}
+
+.hero-container {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    z-index: 1;
+    background: url('../images/gradient.jpg') center center/cover no-repeat;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Optionally hide gradient circles in hero-container */
+.hero-container .gradient-circle,
+.hero-container .gradient-circle-right {
+    display: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .bio {
@@ -49,16 +80,17 @@ p {
 
 .links a {
     text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    border: 2px solid #000;
+    color: #262626;
+    font-weight: 500;
+    border: 1.2px solid #222;
     padding: 10px 20px;
     border-radius: 5px;
+    background: #fff;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .links a:hover {
-    background: #000;
+    background: #000000;
     color: #fff;
 }
 
@@ -78,6 +110,25 @@ p {
     transform: scale(1.1);
 }
 
+.floating-text {
+    text-shadow: 0 8px 32px rgba(0,0,0,0.25), 0 1.5px 8px rgba(255, 140, 80, 0.18);
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10));
+    animation: floatUpDown 3.5s ease-in-out infinite;
+}
+
+.no-float-animation {
+    animation: none !important;
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(8px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
 
 @media screen and (max-width: 480px) {
     h1 {
@@ -87,6 +138,22 @@ p {
     .bio {
         font-size: 0.9em;
         margin-bottom: 20px;
+    }
+
+    .gradient-circle {
+        width: 300px;
+        height: 300px;
+        filter: blur(40px);
+        top: 65%;
+        left: 20%;
+    }
+
+    .gradient-circle-right {
+        width: 250px;
+        height: 250px;
+        filter: blur(40px);
+        top: 35%;
+        left: 110%;
     }
 
     .links {
